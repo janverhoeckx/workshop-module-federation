@@ -1,1 +1,1 @@
-declare module 'workshop-module-federation-remote/Module';
+declare module 'mfe1/Module';

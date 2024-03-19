@@ -1,16 +1,14 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
+import { AppComponent } from "./app.component";
 
-const routes: Routes = [
+export const APP_ROUTES: Routes = [
+  {
+    path: '',
+    component: AppComponent,
+    pathMatch: 'full'
+  },
   {
     path: 'flights',
-    loadChildren: () => import('workshop-module-federation-remote/Module').then(m => m.FlightsModule)
+    loadChildren: () => import('mfe1/Module').then(m => m.RemoteModule)
   }
 ];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule {
-}

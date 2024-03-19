@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { APP_ROUTES } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HTTP_INTERCEPTORS, HttpClientModule } from "@angular/common/http";
-import { NgrokInterceptor } from "./ngrok.interceptor";
+import { HttpClientModule } from "@angular/common/http";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -12,12 +12,10 @@ import { NgrokInterceptor } from "./ngrok.interceptor";
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(APP_ROUTES)
   ],
-  providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: NgrokInterceptor, multi: true},
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {
