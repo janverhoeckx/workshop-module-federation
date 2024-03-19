@@ -11,7 +11,7 @@ This workshop uses Angular and the Module Federation plugin for Webpack.
 ## Prerequisites
 - Node.js
 - Angular CLI
-- Ngrok to host your micro frontend from your dev machine
+- Ngrok to host your micro frontend from your dev machine (https://ngrok.com/download)
 
 ## Getting started
 1. Clone the remote base project repository: (https://github.com/janverhoeckx/workshop-module-federation-remote)
