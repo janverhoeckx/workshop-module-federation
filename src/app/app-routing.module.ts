@@ -8,7 +8,7 @@ export const APP_ROUTES: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'flights',
+    path: 'checkout',
     loadChildren: () => import('mfe1/Module').then(m => m.RemoteModule)
   }
 ];
